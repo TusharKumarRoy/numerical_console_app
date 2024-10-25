@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
-#define terminatingItr 20
+#define terminatingItr 30
 
 using namespace std;
 
-double tolerance = 0.00001;
+double tolerance = 0.0001;
 
 double fx(double x, vector<double> v)
 {
@@ -43,10 +43,11 @@ void newtonRaphson(vector<double> v, double x0) {
         x0 = x1;
         iterations++;
     }
-    cout<<"Solution of the Equation is: "<<solution<<endl;
+    
+    cout << "\nCould not converge to solution in " << terminatingItr << " iterations" << endl ;
 }
 
-int callNewtonRaphson(){
+void callNewtonRaphson(){
     int n;
     cout << "Enter the degree of the polynomial: ";
     cin >> n;
@@ -60,6 +61,6 @@ int callNewtonRaphson(){
     cout << "Enter initial guess for Newton-Raphson method: ";
     cin >> initialGuess;
     newtonRaphson(coefficientMatrix, initialGuess);
-    return 0;
+    return;
 }
 

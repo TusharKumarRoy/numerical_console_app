@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
-#define terminatingItr 20
+#define terminatingItr 30
 
 using namespace std;
 
-double tolerance = 0.00001;
+double tolerance = 0.0001;
 
 double fx(double x, vector<double> v)
 {
@@ -47,10 +47,11 @@ void secant(vector<double> v, double x1, double x2)
         x2 = x3;
         iterations++;
     }
-    cout << "Solution of the equation is: " << solution << endl;
+    
+    cout << "\nCould not converge to solution in " << terminatingItr << " iterations" << endl ;
 }
 
-int callSecant()
+void callSecant()
 {
     int n;
     cout << "Enter the degree of the polynomial: ";
@@ -67,5 +68,5 @@ int callSecant()
     cout << "Enter two initial guesses for Secant method: ";
     cin >> initialGuess1 >> initialGuess2;
     secant(coefficientMatrix, initialGuess1, initialGuess2);
-    return 0;
+    return;
 }
