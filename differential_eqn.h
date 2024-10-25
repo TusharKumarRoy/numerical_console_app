@@ -1,6 +1,0 @@
-#ifndef DIFFERENTIAL_EQN_H
-#define DIFFERENTIAL_EQN_H
-
-
-
-#endif
