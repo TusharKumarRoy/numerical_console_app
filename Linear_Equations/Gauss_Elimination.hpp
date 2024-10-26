@@ -1,4 +1,4 @@
-#include "take_input.hpp"
+#include "input_output.hpp"
 double eps=1e-7;
 bool row_swap(vector<vector<double>> &a, int i, int n, int ex=1)
 {
@@ -31,4 +31,10 @@ bool gauss_Elimination(vector<vector<double>> &a, int n, int ex=1)
         cout << '\n';
     }
     return true;
+}
+void callgauss()
+{
+    int n=input();
+    auto a=input(n,1);
+    if(gauss_Elimination(a,n)) display(n,1,a);
 }
