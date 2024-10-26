@@ -1,7 +1,7 @@
 
   
 
-<h1  align="center"  style="font-weight: bold;">Numerical Methods Laboratory Assignment <br /> by 2107036, 2107070, 2107103
+<h1  align="center"  style="font-weight: bold;">Numerical Methods Laboratory Assignment <br /> by 2107037, 2107070, 2107103
 </h1>
   
 <br/>
@@ -71,11 +71,11 @@ A simple console application that implements various numerical methods.
 
   
 
+
 <p  align="center">
-
 <a  href="https://github.com/TusharKumarRoy/numerical_console_app">📱 Visit this Project</a>
-
 </p>
+
 
   
 
@@ -163,6 +163,8 @@ g++ -o program program.cpp&program.exe
 <sub>
 
 <b>Tushar Kumar Roy</b>
+<b>Dept: CSE-21</b>
+<b>Roll: 2107037</b>
 
 </sub>
 
@@ -180,7 +182,9 @@ g++ -o program program.cpp&program.exe
 
 <sub>
 
-<b>Dipra Dutta</b>
+<b>Dipra Datta</b>
+<b>Dept: CSE-21</b>
+<b>Roll: 2107070</b>
 
 </sub>
 
@@ -199,6 +203,8 @@ g++ -o program program.cpp&program.exe
 <sub>
 
 <b>Saleheen Uddin Sakin</b>
+<b>Dept: CSE-21</b>
+<b>Roll: 2107103</b>
 
 </sub>
 
