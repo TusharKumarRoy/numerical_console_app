@@ -4,10 +4,10 @@ void display(int op)
 {
     cout << "Enter the " << (op==0?"Matrix:":"Coefficients") <<'\n';
 }
-int input()
+int input(int op)
 {
     int n;
-    cout << "Enter the Number of Equations: ";
+    cout << "Enter the Number of " << (op?"rows/columns":"Equations") << " : ";
     cin >> n;
     return n;
 }
