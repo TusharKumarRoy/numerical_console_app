@@ -44,10 +44,12 @@ void rateTheApp()
 {
     cout << endl;
     cout << endl;
-    cout << "=>=>=>=>=>=>=>=>=>=>>=> Rate The App <=<=<=<=<=<=<=<=<=<=<="<< endl;   
-    cout << "         Do you want to rate this application (y/n) : " << endl;
-    cout << "-----------------------------------------------------------"<< endl;
+    cout << "=>=>=>=>=>=>=>=>=>=>=>=>=><=<=<=<=<=<=<=<=<=<=<=<=<=<=<="<< endl;   
+    cout << "                     Rate Our App                       " << endl;
+    cout << "=>=>=>=>=>=>=>=>=>=>=>=>=><=<=<=<=<=<=<=<=<=<=<=<=<=<=<="<< endl;
     cout << endl;
+
+    cout << "Do you want to rate the the application (y/n) :  ";
 
     string choice;
    
@@ -55,7 +57,7 @@ void rateTheApp()
 
     if(choice == "y" || choice == "Y")
     {
-        cout << "Give Rating (out of 5) : ";
+        cout << "Give A Rating (out of 5) : ";
         cin >> rating;
         cout << "Thank you for rating! :)" << endl;
         exit(0);
