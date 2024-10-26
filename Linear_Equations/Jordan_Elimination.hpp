@@ -1,4 +1,5 @@
 #include "Gauss_Elimination.hpp"
+
 bool jordan_Elimination(vector<vector<double>> &a, int n, int ex=1)
 {
     if(!gauss_Elimination(a,n,ex)) return false;

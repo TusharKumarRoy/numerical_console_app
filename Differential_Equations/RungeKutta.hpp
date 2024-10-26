@@ -29,6 +29,7 @@ void choseEquation() {
         cout << "=>=>=>=>=>=>=>=>=>=> Choose an equation <=<=<=<=<=<=<=<=<=<=" << endl;
         cout << " 1. dy/dx = sin(x)               2. dy/dx = 2*sin(x)*cos(x)" << endl;
         cout << " 3. dy/dx = 5*x*x - 2*y          4. dy/dx = (y*y-x*x)/(y*y+x*x)" << endl;
+        cout << "------------------------------------------------------------" << endl;
         cout << endl;
         cout << "choice : ";
         cin >> choice;
