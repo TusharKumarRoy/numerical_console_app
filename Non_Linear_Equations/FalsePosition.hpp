@@ -2,7 +2,7 @@
 using namespace std;
 
 // method to determine the value of the polynomial for a value of varible x
-double determinePolynomial(const vector<double> &coeffs, double x)
+double determinePolynomial_Falsi(const vector<double> &coeffs, double x)
 {
     double value = 0.0;
     int degree = coeffs.size() - 1;
@@ -40,8 +40,8 @@ void falsePosition()
         cin >> tolerable_error;
 
         // determine polnomial value of those guesses
-        fLeft = determinePolynomial(coeffs, leftGuess);
-        fRight = determinePolynomial(coeffs, rightGuess);
+        fLeft = determinePolynomial_Falsi(coeffs, leftGuess);
+        fRight = determinePolynomial_Falsi(coeffs, rightGuess);
 
         // for bisection fLeft * fRight < 0.0 must ..
         if (fLeft * fRight > 0.0)
@@ -54,7 +54,7 @@ void falsePosition()
     {
         // calculate the root using false positon formula
         x = (leftGuess * fRight - rightGuess * fLeft) / (fRight - fLeft); 
-        fx = determinePolynomial(coeffs, x);                              // polynomial value of the root
+        fx = determinePolynomial_Falsi(coeffs, x);                              // polynomial value of the root
 
         // update the initial guesses
         if (fLeft * fx < 0)

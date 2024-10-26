@@ -2,7 +2,7 @@
 using namespace std;
 
 //method to determine the value of the polynomial for a value of varible x
-double determinePolynomial(const vector<double>& coeffs , double x)
+double determinePolynomial_Bisection(const vector<double>& coeffs , double x)
 {
     double value = 0.0;
     int degree = coeffs.size() - 1;
@@ -16,14 +16,15 @@ double determinePolynomial(const vector<double>& coeffs , double x)
 void bisection()
 {
     int degree;
-    cout << "enter degree of the polynomial : ";
+    cout << "degree of the polynomial : ";
     cin >> degree;
 
     // take input of coefficients
     vector<double> coeffs(degree+1);
-    cout << "enter coefficients  (from highest degree to lowest degree :)";
+
     for(int i = 0 ; i <= degree ; i++)
     {
+        cout << "coefficient of x^" << degree - i <<" : ";
         cin >> coeffs[i];
     }
 
@@ -42,8 +43,8 @@ void bisection()
         cin >> tolerable_error;
 
         // determine polnomial value of those guesses
-        fLeft = determinePolynomial(coeffs , leftGuess);
-        fRight = determinePolynomial(coeffs , rightGuess);
+        fLeft = determinePolynomial_Bisection(coeffs , leftGuess);
+        fRight = determinePolynomial_Bisection(coeffs , rightGuess);
 
         // for bisection fLeft * fRight < 0.0 must ..
         if(fLeft * fRight > 0.0)
@@ -56,7 +57,7 @@ void bisection()
     {
         // calculate the root using bisection formula
         x = (leftGuess + rightGuess) / 2;   
-        fx = determinePolynomial(coeffs , x);  // polynomial value at root
+        fx = determinePolynomial_Bisection(coeffs , x);  // polynomial value at root
 
         // update initial guesses
         if(fLeft * fx < 0)

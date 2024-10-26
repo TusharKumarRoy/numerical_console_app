@@ -3,9 +3,9 @@
 
 using namespace std;
 
-double tolerance = 0.0001;
+double tolerance_secant = 0.0001;
 
-double fx(double x, vector<double> v)
+double fx_secant(double x, vector<double> v)
 {
     double total = 0, temp = 1;
     for (auto it : v)
@@ -16,7 +16,7 @@ double fx(double x, vector<double> v)
     return total;
 }
 
-double derivedfx(double x, vector<double> v)
+double derivedfx_secant(double x, vector<double> v)
 {
     double total = 0, temp = 1;
     for (int i = 1; i < v.size(); ++i)
@@ -33,12 +33,12 @@ void secant(vector<double> v, double x1, double x2)
     double solution;
     while (iterations <= 12)
     {
-        double fx1 = fx(x1, v);
-        double fx2 = fx(x2, v);
+        double fx1 = fx_secant(x1, v);
+        double fx2 = fx_secant(x2, v);
         double x3 = x2 - ((fx2 * (x2 - x1)) / (fx2 - fx1));
-        double fx3 = fx(x3, v);
+        double fx3 = fx_secant(x3, v);
         solution = x3;
-        if (fabs(fx3) <= tolerance)
+        if (fabs(fx3) <= tolerance_secant)
         {
             cout << "Solution of the equation is: " << solution << endl;
             return;

@@ -3,9 +3,9 @@
 
 using namespace std;
 
-double tolerance = 0.0001;
+double tolerance_newton = 0.0001;
 
-double fx(double x, vector<double> v)
+double fx_newton(double x, vector<double> v)
 {
     double total = 0, temp = 1;
     for (auto it : v)
@@ -16,7 +16,7 @@ double fx(double x, vector<double> v)
     return total;
 }
 
-double derivedfx(double x, vector<double> v)
+double derivedfx_newton(double x, vector<double> v)
 {
     double total = 0, temp = 1;
     for (int i = 1; i < v.size(); ++i)
@@ -31,12 +31,12 @@ void newtonRaphson(vector<double> v, double x0) {
     int iterations = 1;
     double solution;
     while (iterations <= terminatingItr) {
-        double fx0 = fx(x0, v);
-        double fpx0 = derivedfx(x0, v);
+        double fx0 = fx_newton(x0, v);
+        double fpx0 = derivedfx_newton(x0, v);
         double x1 = x0 - (fx0 / fpx0);
-        double fx1 = fx(x1, v);
+        double fx1 = fx_newton(x1, v);
         solution=x1;
-        if (fabs(fx1) <= tolerance) {
+        if (fabs(fx1) <= tolerance_newton) {
             cout<<"Solution of the Equation is: "<<solution<<endl;
             return;
         }
