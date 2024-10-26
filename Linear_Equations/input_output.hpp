@@ -11,7 +11,7 @@ int input()
     cin >> n;
     return n;
 }
-auto input(int n)
+auto input1(int n)
 {
     vector<vector<double>> a(n,vector<double>(n));
     vector<double>b(n);
@@ -23,7 +23,7 @@ auto input(int n)
     }
     return make_pair(a,b);
 }
-auto input(int n,int ex)
+auto input2(int n,int ex)
 {
     vector<vector<double>> a(n,vector<double>(n+ex));
     display(ex);
@@ -31,14 +31,14 @@ auto input(int n,int ex)
         for(int j=0;j<n+ex;j++) cin >> a[i][j];
     return a;
 }
-void display(const vector<double> &ans)
+void display1(const vector<double> &ans)
 {
    cout << "The Solutions are:\n";
    int n=ans.size();
    for(int i=1;i<=n;i++) cout << "x1 = "<<ans[i-1] << '\n';
    cout << '\n';
 }
-void display(int n, int ex, vector<vector<double>> ans)
+void display2(int n, int ex, vector<vector<double>> ans)
 {
     cout << "Here is the solution:\n";
     for(int i=0;i<n;i++)

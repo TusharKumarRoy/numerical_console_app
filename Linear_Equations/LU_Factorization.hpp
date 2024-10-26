@@ -1,4 +1,3 @@
-#include "input_output.hpp"
 void LUdecomposition(vector<vector<double>> &a, vector<vector<double>> &l, vector<vector<double>> &u, int n) {
    int i = 0, j = 0, k = 0;
    for (i = 0; i < n; i++) {
@@ -53,11 +52,11 @@ vector<double> solveLU(vector<vector<double>> &a,vector<double>&b) {
     LUdecomposition(a,l,u,n);
     return BackwardSub(u,ForwardSub(l,b));
 }
-void callLU()
+void callLUFactorization()
 {
    int n=input();
-   auto p=input(n);
+   auto p=input1(n);
    auto a=p.first;
    auto d=p.second;
-   display(solveLU(a,d));
+   display1(solveLU(a,d));
 }

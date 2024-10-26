@@ -32,9 +32,9 @@ bool gauss_Elimination(vector<vector<double>> &a, int n, int ex=1)
     }
     return true;
 }
-void callgauss()
+void callGaussEliminationMethod()
 {
     int n=input();
-    auto a=input(n,1);
-    if(gauss_Elimination(a,n)) display(n,1,a);
+    auto a=input2(n,1);
+    if(gauss_Elimination(a,n)) display2(n,1,a);
 }

@@ -1,17 +1,39 @@
 #include <bits/stdc++.h>
+// non linear dependencies
 #include "Non_Linear_Equations/Bisection.hpp"
 #include "Non_Linear_Equations/FalsePosition.hpp"
 #include "Non_Linear_Equations/Secant.hpp"
 #include "Non_Linear_Equations/NewtonRaphson.hpp"
-
+// linear dependencies
+#include "Linear_Equations/Gauss_Elimination.hpp"
 #include "Linear_Equations/GaussSeidel.hpp"
 #include "Linear_Equations/JacobiIterative.hpp"
-
+#include "Linear_Equations/Jordan_Elimination.hpp"
+#include "Linear_Equations/LU_Factorization.hpp"
+#include "Linear_Equations/input_output.hpp"
+// differential dependencies
 #include "Differential_Equations/RungeKutta.hpp"
+// matrix dependencies
+#include "Matrix_Inversion/Matrix.hpp"
 
 int rating = 0;
 
 using namespace std;
+
+string take_choice(int cc)
+{
+    char c=cc+'0';
+    string choice;
+    cout << "choice : ";
+    cin >> choice;
+    cout << endl;
+    if(choice.size()>1 || choice[0]<'1' || choice[0]>c){
+        cout << "Invalid choice . Please enter a valid choice : " << endl; 
+        return take_choice(cc);
+    }
+    return choice;
+}
+
 
 void rateTheApp()
 {
@@ -53,19 +75,7 @@ void Linear()
     cout << "-------------------------------------------------------------"<< endl;
     cout << endl;
 
-    string choice;
-
-    while(true)
-    {
-        cout << "choice : ";
-        cin >> choice;
-        cout << endl;
-        if(choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5" && choice != "6" && choice != "7")
-            cout << "Invalid choice . Please enter a valid choice : " << endl;
-        else
-            break;
-        
-    }
+    string choice = take_choice(7);
 
     switch(choice[0])
     {
@@ -76,13 +86,13 @@ void Linear()
             callGaussSeidelMethod();
             break;
         case '3':
-            //Gauss_Elimination();
+            callGaussEliminationMethod();
             break;
         case '4':
-            //Gauss_Jordan();
+            callGaussJordanEliminationMethod();
             break;
         case '5':
-            //LU_Factorization();
+            callLUFactorization();
             break;
         case '6':
             return;
@@ -104,19 +114,7 @@ void Non_Linear()
     cout << "------------------------------------------------------"<< endl;
     cout << endl;
 
-    string choice;
-
-    while(true)
-    {
-        cout << "choice : ";
-        cin >> choice;
-        cout << endl;
-        if(choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5" && choice != "6")
-            cout << "Invalid choice . Please enter a valid choice! " << endl;
-        else
-            break;
-        
-    }
+    string choice = take_choice(6);
 
     switch(choice[0])
     {
@@ -149,19 +147,7 @@ void Matrix()
     cout << "------------------------------------------------------"<< endl;
     cout << endl;
 
-    string choice;
-
-    while(true)
-    {
-        cout << "choice : ";
-        cin >> choice;
-        cout << endl;
-        if(choice != "1" && choice != "2" && choice != "3" )
-            cout << "Invalid choice . Please enter a valid choice" << endl;
-        else
-            break;
-        
-    }
+    string choice = take_choice(3);
 
     switch(choice[0])
     {
@@ -185,18 +171,7 @@ void Differential_Eqn()
     cout << "---------------------------------------------------------"<< endl;
     cout << endl;
 
-    string choice;
-
-    while(true)
-    {
-        cout << "choice : ";
-        cin >> choice;
-        cout << endl;
-        if(choice != "1" && choice != "2" && choice != "3")
-            cout << "Invalid choice . Please enter a valid choice" << endl;
-        else
-            break;
-    }
+    string choice = take_choice(3);
 
     switch(choice[0])
     {
@@ -210,6 +185,8 @@ void Differential_Eqn()
     }
 
 }
+
+
 
 int main()
 {
