@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//method to determine the value of the polynomial for a value of varible x
 double determinePolynomial(const vector<double>& coeffs , double x)
 {
     double value = 0.0;
@@ -18,6 +19,7 @@ void bisection()
     cout << "enter degree of the polynomial : ";
     cin >> degree;
 
+    // take input of coefficients
     vector<double> coeffs(degree+1);
     cout << "enter coefficients  (from highest degree to lowest degree :)";
     for(int i = 0 ; i <= degree ; i++)
@@ -25,38 +27,47 @@ void bisection()
         cin >> coeffs[i];
     }
 
-    float a,b,x,fa,fb,fx,error;
+
+    float leftGuess,rightGuess,x,fLeft,fRight,fx,tolerable_error;
+    int itr = 0 ;  // to keep track of total steps to arrive at solution
 
     while(true)
     {
+        // input initial guesses from user
         cout << "enter 1st guess : ";
-        cin >> a;
+        cin >> leftGuess;
         cout << "enter 2nd guess : ";
-        cin >> b;
+        cin >> rightGuess;
         cout << "enter tolerable error : ";
-        cin >> error;
+        cin >> tolerable_error;
 
-        fa = determinePolynomial(coeffs , a);
-        fb = determinePolynomial(coeffs , b);
+        // determine polnomial value of those guesses
+        fLeft = determinePolynomial(coeffs , leftGuess);
+        fRight = determinePolynomial(coeffs , rightGuess);
 
-        if(fa * fb > 0.0)
+        // for bisection fLeft * fRight < 0.0 must ..
+        if(fLeft * fRight > 0.0)
             cout << "incorrect initial guesses" << endl;
         else
-            break;
+            break;  // if fLeft * fRight < 0.0 then break free and go to the main block of bisection 
     }
 
     do
     {
-        x = (a + b) / 2;
-        fx = determinePolynomial(coeffs , x);
+        // calculate the root using bisection formula
+        x = (leftGuess + rightGuess) / 2;   
+        fx = determinePolynomial(coeffs , x);  // polynomial value at root
 
-        if(fa * fx < 0)
-            b = x;
-        else
-            a = x;
+        // update initial guesses
+        if(fLeft * fx < 0)
+            rightGuess = x;
+        else  
+            leftGuess = x;
 
-    }while(fabs(fx) > error);
+        // update total steps
+        itr++;
+    }while(fabs(fx) > tolerable_error);   // checking if the value of the polynomial f(x)  when x = fx is above the tolerance
 
-    cout << "one root is : " << x << endl;
+    cout << " x : " << x <<" => found in total "<< itr << "iterations" << endl;
 
 }
