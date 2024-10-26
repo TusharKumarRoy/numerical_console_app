@@ -129,9 +129,17 @@ How to start your project
 
 cd  numerical_console_app
 
+**for linux**
+
 g++  main.cpp
 
 ./a.out (for linux)
+
+**for windows**
+
+g++ -o program program.cpp&program.exe
+
+
 
 ```
 
@@ -168,7 +176,7 @@ g++  main.cpp
 
 <a  href="https://github.com/dipraru">
 
-<img  src="https://scontent.fdac146-1.fna.fbcdn.net/v/t1.6435-9/64728281_985618781829680_2457658150233309184_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFy8DACkJuqjlN82zZJssgdCReb09JCMBAJF5vT0kIwEBqz8i7qUIvAUY4UiswgyWMz8tB-WArraDqawo1ZGYxL&_nc_ohc=B129cyLXu3wQ7kNvgH8vM9F&_nc_zt=23&_nc_ht=scontent.fdac146-1.fna&_nc_gid=ADYpqj1EOGdPLwJ273R7lWW&oh=00_AYAcW48SpgPPR_FXa7Ke7g50y3JTwRWi5WO1nuQWj9yY_w&oe=67444E2D"  width="100px;"  alt="Dipra Dutta Profile Picture"/><br>
+<img  src="https://i.ibb.co.com/pdDV4hQ/dipraru.jpg"  width="100px;"  alt="Dipra Dutta Profile Picture"/><br>
 
 <sub>
 
