@@ -1,4 +1,4 @@
-#include "Gauss_Elimination.hpp"
+// #include "Gauss_Elimination.hpp"
 
 bool jordan_Elimination(vector<vector<double>> &a, int n, int ex=1)
 {
@@ -9,19 +9,14 @@ bool jordan_Elimination(vector<vector<double>> &a, int n, int ex=1)
         {
             if(abs(a[j][i])<=eps) continue;
             double l=a[j][i]/a[i][i];
-            for(int k=0;k<n+ex;k++) a[j][k]=a[i][k]*l-a[j][k];
+            for(int k=0;k<n+ex;k++) a[j][k]=a[i][k]*l-a[j][k], a[j][k]=(abs(a[j][k])<=eps?0:a[j][k]);
         }
-        for(int j=0;j<n;j++){
-            for(int k=0;k<n+ex;k++) cout << a[j][k] << ' ';
-            cout << '\n';
-        }
-        cout << '\n';
     }
     return true;
 }
 void callGaussJordanEliminationMethod()
 {
-    int n=input();
+    int n=input(0);
     auto a=input2(n,1);
     if(jordan_Elimination(a,n,1)) display2(n,1,a);
 }
