@@ -160,13 +160,13 @@ g++ -o program program.cpp&program.exe
 
 <img  src="https://scontent.fdac146-1.fna.fbcdn.net/v/t39.30808-6/448219813_1818584351969182_7348253047826562328_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHsptKtZzpdpxt_il6eHl1QbAdXJ_MG-PdsB1cn8wb4976Rcym4FAzo5NhlRn1BgnmH_begcUQZyJGWPg36fj9g&_nc_ohc=MrjW4HHnZjoQ7kNvgGT-XgX&_nc_zt=23&_nc_ht=scontent.fdac146-1.fna&_nc_gid=AGM_znjiDZMApolGOWl-Qnl&oh=00_AYChnexOhXtiO8kXcJL3CUxrD3He4KEKfnz0NgE5S8t3pg&oe=6722AE03"  width="100px;"  alt="Tushar Kumar Roy Profile Picture"/><br>
 
-<sub>
 
-<b>Tushar Kumar Roy</b>
-<b>Dept: CSE-21</b>
-<b>Roll: 2107037</b>
 
-</sub>
+<b>Tushar Kumar Roy</b> <br />
+<b>Dept: CSE-21</b><br />
+<b>Roll: 2107037</b><br />
+
+
 
 </a>
 
@@ -180,13 +180,13 @@ g++ -o program program.cpp&program.exe
 
 <img  src="https://i.ibb.co.com/pdDV4hQ/dipraru.jpg"  width="100px;"  alt="Dipra Dutta Profile Picture"/><br>
 
-<sub>
 
-<b>Dipra Datta</b>
-<b>Dept: CSE-21</b>
-<b>Roll: 2107070</b>
 
-</sub>
+<b>Dipra Datta</b><br />
+<b>Dept: CSE-21</b><br />
+<b>Roll: 2107070</b><br />
+
+
 
 </a>
 
@@ -200,13 +200,13 @@ g++ -o program program.cpp&program.exe
 
 <img  src="https://scontent.fdac146-1.fna.fbcdn.net/v/t39.30808-6/321338619_1296116357841641_26836973882773170_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHOzwBWKf7O-PsdAq8tYPq8Lt28B9EEfucu3bwH0QR-52VtW6N0m0enFJIx3AO6GJkV8ygA0u61IOrRmEZTsXd4&_nc_ohc=zCv9dx4D0_UQ7kNvgEs_Hry&_nc_zt=23&_nc_ht=scontent.fdac146-1.fna&_nc_gid=AaGOGsZgw__69JzCIaUdr4w&oh=00_AYB2RVHPoXsU3c-bU5TcFX_rVU8X1FcB803KiyEgcGtiEQ&oe=6722A8E8"  width="100px;"  alt="Saleheen Uddin Sakin Profile Picture"/><br>
 
-<sub>
 
-<b>Saleheen Uddin Sakin</b>
-<b>Dept: CSE-21</b>
-<b>Roll: 2107103</b>
 
-</sub>
+<b>Saleheen Uddin Sakin</b> <br />
+<b>Dept: CSE-21</b><br />
+<b>Roll: 2107103</b><br />
+
+
 
 </a>
 
