@@ -7,21 +7,30 @@
 #include "Linear_Equations/GaussSeidel.hpp"
 #include "Linear_Equations/JacobiIterative.hpp"
 
+#include "Differential_Equations/RungeKutta.hpp"
+
 int rating = 0;
 
 using namespace std;
 
 void rateTheApp()
 {
+    cout << endl;
+    cout << endl;
+    cout << "=>=>=>=>=>=>=>=>=>=>>=> Rate The App <=<=<=<=<=<=<=<=<=<=<="<< endl;   
+    cout << "         Do you want to rate this application (y/n) : " << endl;
+    cout << "-----------------------------------------------------------"<< endl;
+    cout << endl;
+
     string choice;
-    cout << "Do you want to rate this application (y/n) : ";
+   
     cin >> choice;
 
     if(choice == "y" || choice == "Y")
     {
         cout << "Give Rating (out of 5) : ";
         cin >> rating;
-        cout << "Thank you for rating!" << endl;
+        cout << "Thank you for rating! :)" << endl;
         exit(0);
     }
     else if(choice == "n" || choice == "N")
@@ -40,8 +49,8 @@ void Linear()
     cout << "=>=>=>=>=>=>=>=>=>=>>=> Linear Methods <=<=<=<=<=<=<=<=<=<=<="<< endl;   
     cout << "  1. Jacobi Iterative             2. Gauss Seidel Iterative" << endl;
     cout << "  3. Gauss Elimiantion            4. Gauss Jordan Eliminaiton" << endl;
-    cout << "  5. LU Factorization             6. Go Back" <<endl;
-    cout << "  7. Exit" << endl;
+    cout << "  5. LU Factorization             6. Go Back         7. Exit" << endl;
+    cout << "-------------------------------------------------------------"<< endl;
     cout << endl;
 
     string choice;
@@ -92,6 +101,7 @@ void Non_Linear()
     cout << "  1. Bisection Method      2. False Position Method" << endl;
     cout << "  3. Secant Method         4. Newton Raphson Method" << endl;
     cout << "  5. Go Back               6. Exit" << endl;
+    cout << "------------------------------------------------------"<< endl;
     cout << endl;
 
     string choice;
@@ -136,6 +146,7 @@ void Matrix()
     cout << endl;
     cout << "=>=>=>=>=>=>=>=>=> Matrix Operations <=<=<=<=<=<=<=<="<< endl;   
     cout << "  1. Inverse Matrix         2. Go Back       3. Exit  "<< endl;
+    cout << "------------------------------------------------------"<< endl;
     cout << endl;
 
     string choice;
@@ -171,6 +182,7 @@ void Differential_Eqn()
     cout << endl;
     cout << "=>=>=>=>=>=>=>=> Differential Methods <=<=<=<=<=<=<=<=<="<< endl;   
     cout << "  1. Runge Kutta Method       2. Go Back       3. Exit  "<< endl;
+    cout << "---------------------------------------------------------"<< endl;
     cout << endl;
 
     string choice;
@@ -189,7 +201,7 @@ void Differential_Eqn()
     switch(choice[0])
     {
         case '1':
-            //Runge_Kutta();
+            Runge_Kutta();
             break;
         case '2':
             return;
