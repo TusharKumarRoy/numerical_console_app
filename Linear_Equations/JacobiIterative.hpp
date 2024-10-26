@@ -12,7 +12,9 @@ void jacobiMethod(int n)
     int i, j, iterations;
     double sum;
 
-    cout << "Enter coefficients of equations: \n";
+    cout << endl;
+    cout << "Enter coefficients of equations : " << endl;
+    cout << endl;
 
     for (i = 0; i < n; i++)
     {
@@ -59,7 +61,7 @@ void jacobiMethod(int n)
     cout << "\n\nCould not converge to solution in " << terminatingItr << " iterations" << endl ;
 }
 
-void main()
+void callJacobiIterativeMethod()
 {
     int n;
     cout << "Enter the number of variables: ";

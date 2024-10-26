@@ -12,7 +12,9 @@ void gaussSeidelMethod(int n)
     int i, j, iterations;
     double sum;
 
-    cout << "Enter coefficients of equations: \n";
+    cout << endl;
+    cout << "Enter coefficients of equations : " << endl;
+    cout << endl;
     for (i = 0; i < n; i++)
     {
         for (j = 0; j <= n; j++)
@@ -60,7 +62,7 @@ void gaussSeidelMethod(int n)
 void callGaussSeidelMethod()
 {
     int n;
-    cout << "Enter the number of variables: ";
+    cout << "Enter the number of variables : ";
     cin >> n;
     gaussSeidelMethod(n);
     return;

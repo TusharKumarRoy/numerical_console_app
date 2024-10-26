@@ -1,11 +1,38 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #include "Non_Linear_Equations/Bisection.hpp"
 #include "Non_Linear_Equations/FalsePosition.hpp"
 #include "Non_Linear_Equations/Secant.hpp"
 #include "Non_Linear_Equations/NewtonRaphson.hpp"
 
+#include "Linear_Equations/GaussSeidel.hpp"
+#include "Linear_Equations/JacobiIterative.hpp"
+
+int rating = 0;
+
 using namespace std;
 
+void rateTheApp()
+{
+    string choice;
+    cout << "Do you want to rate this application (y/n) : ";
+    cin >> choice;
+
+    if(choice == "y" || choice == "Y")
+    {
+        cout << "Give Rating (out of 5) : ";
+        cin >> rating;
+        cout << "Thank you for rating!" << endl;
+        exit(0);
+    }
+    else if(choice == "n" || choice == "N")
+    {
+        exit(0);
+    }
+    else 
+    {
+        cout << "Please give a valid answer" << endl;
+    }
+}
 void Linear()
 {
     cout << endl;
@@ -34,10 +61,10 @@ void Linear()
     switch(choice[0])
     {
         case '1':
-            //Jacobi();
+            callJacobiIterativeMethod();
             break;
         case '2':
-            //Gauss_Seidel();
+            callGaussSeidelMethod();
             break;
         case '3':
             //Gauss_Elimination();
@@ -51,7 +78,7 @@ void Linear()
         case '6':
             return;
         case '7':
-            exit(0);
+            rateTheApp();
 
     }
 
@@ -98,7 +125,7 @@ void Non_Linear()
         case '5':
             return;
         case '6':
-            exit(0);
+            rateTheApp();
 
     }
 }
@@ -133,7 +160,7 @@ void Matrix()
         case '2':
             return;
         case '3':
-            exit(0);
+            rateTheApp();
     }
 
 }
@@ -167,7 +194,7 @@ void Differential_Eqn()
         case '2':
             return;
         case '3':
-            exit(0);
+            rateTheApp();
     }
 
 }
@@ -221,7 +248,7 @@ int main()
                 Matrix();
                 break;
             case '5':
-                exit(0);
+                rateTheApp();
 
         }
     }
