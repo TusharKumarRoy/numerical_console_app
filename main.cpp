@@ -1,4 +1,10 @@
 #include <bits/stdc++.h>
+using namespace std;
+/*
+1 1 1 1
+4 3 -1 6
+3 5 3 4*/
+#include "Linear_Equations/input_output.hpp"
 // non linear dependencies
 #include "Non_Linear_Equations/Bisection.hpp"
 #include "Non_Linear_Equations/FalsePosition.hpp"
@@ -10,7 +16,6 @@
 #include "Linear_Equations/JacobiIterative.hpp"
 #include "Linear_Equations/Jordan_Elimination.hpp"
 #include "Linear_Equations/LU_Factorization.hpp"
-#include "Linear_Equations/input_output.hpp"
 // differential dependencies
 #include "Differential_Equations/RungeKutta.hpp"
 // matrix dependencies
@@ -152,7 +157,7 @@ void Matrix()
     switch(choice[0])
     {
         case '1':
-            //Matrix_Inverse();
+            callMatrix();
             break;
         case '2':
             return;

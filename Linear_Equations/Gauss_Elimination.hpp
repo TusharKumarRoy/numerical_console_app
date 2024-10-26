@@ -1,4 +1,3 @@
-#include "input_output.hpp"
 double eps=1e-7;
 bool row_swap(vector<vector<double>> &a, int i, int n, int ex=1)
 {
@@ -24,17 +23,12 @@ bool gauss_Elimination(vector<vector<double>> &a, int n, int ex=1)
             double u=a[j][i]/a[i][i];
             for(int k=i;k<n+ex;k++) a[j][k]=a[i][k]*u-a[j][k];
         }
-        for(int j=0;j<n;j++){
-            for(int k=0;k<n+ex;k++) cout << a[j][k] << ' ';
-            cout << '\n';
-        }
-        cout << '\n';
     }
     return true;
 }
 void callGaussEliminationMethod()
 {
-    int n=input();
+    int n=input(0);
     auto a=input2(n,1);
     if(gauss_Elimination(a,n)) display2(n,1,a);
 }
