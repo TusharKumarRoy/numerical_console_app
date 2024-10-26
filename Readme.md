@@ -137,7 +137,7 @@ g++  main.cpp
 
 **for windows**
 
-g++ -o program program.cpp&program.exe
+g++ -o main main.cpp&main.exe
 
 
 
