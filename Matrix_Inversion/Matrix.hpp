@@ -1,4 +1,4 @@
-#include "Jordan_Elimination.hpp"
+#include "Linear_Equations/Jordan_Elimination.hpp"
 bool row_echelon(vector<vector<double>> &a, int n, int ex=1)
 {
     if(!jordan_Elimination(a,n,ex)) return false;
@@ -9,13 +9,19 @@ bool row_echelon(vector<vector<double>> &a, int n, int ex=1)
     }
     return true;
 }
-vector<vector<double>> matrix_inverse(vector<vector<double>> &a, int n)
+void matrix_inverse(vector<vector<double>> &a, int n)
 {
     for(int i=0;i<n;i++)
         for(int j=0;j<n;j++) a[i].push_back((i==j));
-    row_echelon(a,n,n);
+    if(!row_echelon(a,n,n)) return;
     vector<vector<double>> ans(n,vector<double>(n));
     for(int i=0;i<n;i++)
         for(int j=n;j<n+n;j++)  ans[i][j-n]=a[i][j];
-    return ans;
+    display(n,0,ans);
+}
+void callMatrix()
+{
+    int n=input();
+    auto a=input(n,0);
+    matrix_inverse(a,n);
 }

@@ -1,4 +1,4 @@
-#include "take_input.hpp"
+#include "input_output.hpp"
 void LUdecomposition(vector<vector<double>> &a, vector<vector<double>> &l, vector<vector<double>> &u, int n) {
    int i = 0, j = 0, k = 0;
    for (i = 0; i < n; i++) {
@@ -53,12 +53,11 @@ vector<double> solveLU(vector<vector<double>> &a,vector<double>&b) {
     LUdecomposition(a,l,u,n);
     return BackwardSub(u,ForwardSub(l,b));
 }
-int main()
+void callLU()
 {
-    int n=input();
-    auto p=input1(n);
-    auto x=solveLU(a,d);
-    cout << "The Solutions are:\n";
-    for(int i=1;i<=n;i++) cout << "x1 = "<<x[i-1] << '\n';
-    cout << '\n';
+   int n=input();
+   auto p=input(n);
+   auto a=p.first;
+   auto d=p.second;
+   display(solveLU(a,d));
 }

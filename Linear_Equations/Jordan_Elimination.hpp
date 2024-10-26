@@ -18,3 +18,9 @@ bool jordan_Elimination(vector<vector<double>> &a, int n, int ex=1)
     }
     return true;
 }
+void callJordan()
+{
+    int n=input();
+    auto a=input(n,1);
+    if(jordan_Elimination(a,n,1)) display(n,1,a);
+}
